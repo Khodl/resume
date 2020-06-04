@@ -24,7 +24,7 @@ body {
 
 #page {
   max-width: 800px;
-  margin: 1cm auto;
+  margin: 1.5cm auto;
   background: #fff;
   padding: 1.5cm;
 }
@@ -32,7 +32,16 @@ body {
   #page {
     margin: 0;
     max-width: none;
-    padding: 0;
+  }
+}
+@media screen and (max-width: 750px) {
+  #page {
+    margin: 0;
+  }
+}
+@media screen and (max-width: 550px) {
+  #page {
+    padding: 1.5cm 0.75cm;
   }
 }
 
@@ -70,7 +79,7 @@ header div {
   grid-template-columns: 2fr 1fr;
   grid-gap: 0.5cm;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
   header div {
     font-size: 0.9em;
     grid-template-columns: 1fr;
@@ -82,6 +91,11 @@ article {
   display: grid;
   grid-template-columns: 7em auto;
   align-items: center;
+}
+@media screen and (max-width: 550px) {
+  article {
+    display: block;
+  }
 }
 article h3, article .content {
   grid-column-start: 2;
@@ -97,6 +111,11 @@ article h3 b {
 article h3 i {
   font-weight: 300;
 }
+@media screen and (max-width: 550px) {
+  article h3 i {
+    font-weight: 700;
+  }
+}
 article h3 i small {
   display: inline-block;
   color: rgba(17, 17, 17, 0.5);
@@ -106,14 +125,38 @@ article h3 i small::before {
   content: "ᐧ ";
   margin: 0 0.2em;
 }
+@media screen and (max-width: 750px) {
+  article h3 i small {
+    display: block;
+  }
+  article h3 i small::before {
+    display: none;
+  }
+}
 article .dates {
   grid-row-start: 1;
   grid-row-end: 2;
   color: rgba(17, 17, 17, 0.5);
 }
+@media screen and (max-width: 550px) {
+  article .dates {
+    font-size: 0.9em;
+  }
+  article .dates > *::before {
+    content: " - ";
+  }
+  article .dates > *:first-child::before {
+    content: "";
+  }
+}
 article .dates span {
   display: block;
   text-transform: uppercase;
+}
+@media screen and (max-width: 550px) {
+  article .dates span {
+    display: inline-block;
+  }
 }
 article .dates i {
   font-style: normal;

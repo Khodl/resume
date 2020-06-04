@@ -4,6 +4,10 @@ article {
   grid-template-columns: 7em auto;
   align-items: center;
 
+  @include mobile-version {
+    display: block;
+  }
+
   h3, .content {
     grid-column-start: 2;
   }
@@ -21,6 +25,10 @@ article {
     i { // Company
       font-weight: 300;
 
+      @include mobile-version {
+        font-weight: 700;
+      }
+
       small { // Location
         display: inline-block;
         color: $color-text-light;
@@ -29,6 +37,14 @@ article {
           content: "ᐧ ";
           margin: 0 .2em;
         }
+
+        @include tablet-version {
+          display: block;
+          &::before {
+            display: none;
+          }
+        }
+
       }
     }
   }
@@ -38,8 +54,27 @@ article {
     grid-row-end: 2;
     color: $color-text-light;
 
+    @include mobile-version {
+      font-size: .9em;
+      > * {
+        &::before {
+          content: " - ";
+        }
+
+        &:first-child::before {
+          content: "";
+        }
+      }
+    }
+
+
     span { // Date
       display: block;
+
+      @include mobile-version {
+        display: inline-block;
+      }
+
       text-transform: uppercase;
     }
 

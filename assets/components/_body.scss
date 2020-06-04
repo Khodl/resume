@@ -9,20 +9,26 @@ body {
 
 #page {
   max-width: 800px;
-  margin: 1cm auto;
+  margin: $page-margin auto;
   background: #fff;
-  padding: 1.5cm;
+  padding: $page-margin;
 
   @include print-version {
     margin: 0;
     max-width: none;
-    padding: 0;
+  }
+
+  @include tablet-version {
+    margin: 0;
+  }
+  @include mobile-version {
+    padding: $page-margin $page-margin*.5;
   }
 }
 
 @include print-version {
   @page {
-    margin: 1.5cm;
+    margin: $page-margin;
     size: A4;
   }
 }
