@@ -1,0 +1,25 @@
+* {
+  line-height: 1.6em;
+}
+
+body {
+  background: #fafafa;
+  color: $color-text;
+}
+
+#page {
+  max-width: 800px;
+  margin: 1cm auto;
+  background: #fff;
+  padding: 1.5cm;
+}
+
+h1, h2, h3 {
+  margin: $spacer 0;
+}
+
+h2 {
+  // color: $color-primary;
+}
+
+

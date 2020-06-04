@@ -1,0 +1,61 @@
+article {
+  margin: $spacer 0;
+  display: grid;
+  grid-template-columns: 7em auto;
+  align-items: center;
+
+  h3, .content {
+    grid-column-start: 2;
+  }
+
+  h3 {
+
+    font-size: 1em;
+    margin: 0;
+
+    b { // Position
+      text-transform: uppercase;
+      display: block;
+    }
+
+    i { // Company
+      font-weight: 300;
+
+      small { // Location
+        display: inline-block;
+        color: $color-text-light;
+        font-size: 1em;
+        &::before {
+          content: "ᐧ ";
+          margin: 0 .2em;
+        }
+      }
+    }
+  }
+
+  .dates {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    color: $color-text-light;
+
+    span { // Date
+      display: block;
+      text-transform: uppercase;
+    }
+
+    i { // Ongoing
+      font-style: normal;
+      font-size: .9em;
+    }
+  }
+
+  .content {
+    color: $color-content;
+    font-size: .9em;
+
+    b {
+      color: $color-text;
+    }
+  }
+
+}
