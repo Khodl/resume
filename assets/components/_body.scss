@@ -1,5 +1,5 @@
 * {
-  line-height: 1.6em;
+  line-height: 1.4em;
 }
 
 body {
@@ -53,6 +53,7 @@ body {
 
 h1, h2, h3 {
   margin: $spacer 0;
+  break-after: avoid;
 }
 
 h2 {

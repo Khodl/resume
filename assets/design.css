@@ -14,7 +14,7 @@ h1, h2, h3 {
 }
 
 * {
-  line-height: 1.6em;
+  line-height: 1.4em;
 }
 
 body {
@@ -72,6 +72,7 @@ body {
 }
 h1, h2, h3 {
   margin: 0.5cm 0;
+  break-after: avoid;
 }
 
 header {
@@ -93,6 +94,9 @@ header ul, header li {
   padding: 0;
   margin: 0;
 }
+header li {
+  margin-bottom: 0.25em;
+}
 header div {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -110,6 +114,7 @@ article {
   display: grid;
   grid-template-columns: 7em auto;
   align-items: center;
+  page-break-inside: avoid;
 }
 @media screen and (max-width: 550px) {
   article {
@@ -187,6 +192,9 @@ article .content {
 }
 article .content b {
   color: #111;
+}
+article .content p, article .content ul {
+  margin: 0.125cm 0;
 }
 
 /*# sourceMappingURL=design.css.map */

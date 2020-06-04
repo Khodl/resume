@@ -4,6 +4,8 @@ article {
   grid-template-columns: 7em auto;
   align-items: center;
 
+  page-break-inside:avoid;
+
   @include mobile-version {
     display: block;
   }
@@ -91,6 +93,11 @@ article {
     b {
       color: $color-text;
     }
+
+    p, ul {
+      margin: $spacer*0.25 0;
+    }
+
   }
 
 }

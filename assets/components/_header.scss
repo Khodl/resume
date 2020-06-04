@@ -20,6 +20,10 @@ header {
     margin: 0;
   }
 
+  li {
+    margin-bottom: .25em;
+  }
+
   div {
     display: grid;
     grid-template-columns: 2fr 1fr;
