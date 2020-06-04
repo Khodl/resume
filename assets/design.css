@@ -28,7 +28,20 @@ body {
   background: #fff;
   padding: 1.5cm;
 }
+@media print {
+  #page {
+    margin: 0;
+    max-width: none;
+    padding: 0;
+  }
+}
 
+@media print {
+  @page {
+    margin: 1.5cm;
+    size: A4;
+  }
+}
 h1, h2, h3 {
   margin: 0.5cm 0;
 }
@@ -56,6 +69,12 @@ header div {
   display: grid;
   grid-template-columns: 2fr 1fr;
   grid-gap: 0.5cm;
+}
+@media screen and (max-width: 600px) {
+  header div {
+    font-size: 0.9em;
+    grid-template-columns: 1fr;
+  }
 }
 
 article {
