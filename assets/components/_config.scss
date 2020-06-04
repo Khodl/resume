@@ -1,9 +1,14 @@
 $color-primary : #250389;
 
-$color-text: #111;
-$color-text-light: transparentize($color-text, .5);
+$color-body-a : #3FB8AF;
+$color-body-b : #7FC7AF;
+$color-body : linear-gradient(to right, $color-body-a, $color-body-b) top left repeat-x;
+
+$color-text : #111;
+$color-text-light : transparentize($color-text, .5);
 
 $color-content: #555;
 
 $spacer : .5cm;
 $page-margin : 1.5cm;
+$page-width : 21cm - (2*$page-margin); // A4
