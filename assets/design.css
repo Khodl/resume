@@ -75,6 +75,14 @@ h1, h2, h3 {
   break-after: avoid;
 }
 
+.languages h4, .languages p {
+  margin: 0;
+}
+.languages .content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
 header {
   font-size: 1.1em;
 }
@@ -109,6 +117,10 @@ header div {
   }
 }
 
+.section {
+  page-break-inside: avoid;
+}
+
 article {
   margin: 0.5cm 0;
   display: grid;
@@ -123,39 +135,6 @@ article {
 }
 article h3, article .content {
   grid-column-start: 2;
-}
-article h3 {
-  font-size: 1em;
-  margin: 0;
-}
-article h3 b {
-  text-transform: uppercase;
-  display: block;
-}
-article h3 i {
-  font-weight: 300;
-}
-@media screen and (max-width: 550px) {
-  article h3 i {
-    font-weight: 700;
-  }
-}
-article h3 i small {
-  display: inline-block;
-  color: rgba(17, 17, 17, 0.5);
-  font-size: 1em;
-}
-article h3 i small::before {
-  content: "ᐧ ";
-  margin: 0 0.2em;
-}
-@media screen and (max-width: 800px) {
-  article h3 i small {
-    display: block;
-  }
-  article h3 i small::before {
-    display: none;
-  }
 }
 article .dates {
   grid-row-start: 1;
@@ -186,15 +165,53 @@ article .dates i {
   font-style: normal;
   font-size: 0.9em;
 }
-article .content {
-  color: #555;
+
+article h3 b, article.skills h3, .skills h3 b, .skills.skills h3 {
+  text-transform: uppercase;
+  display: block;
+}
+article h3, .skills h3 {
+  font-size: 1em;
+  margin: 0;
+}
+article h3 i, .skills h3 i {
+  font-weight: 300;
+}
+@media screen and (max-width: 550px) {
+  article h3 i, .skills h3 i {
+    font-weight: 700;
+  }
+}
+article h3 i small, .skills h3 i small {
+  display: inline-block;
+  color: rgba(17, 17, 17, 0.5);
+  font-size: 1em;
+}
+article h3 i small::before, .skills h3 i small::before {
+  content: "ᐧ ";
+  margin: 0 0.2em;
+}
+@media screen and (max-width: 800px) {
+  article h3 i small, .skills h3 i small {
+    display: block;
+  }
+  article h3 i small::before, .skills h3 i small::before {
+    display: none;
+  }
+}
+article .content, .skills .content {
+  color: #666;
   font-size: 0.9em;
 }
-article .content b {
+article .content b, .skills .content b {
   color: #111;
 }
-article .content p, article .content ul {
+article .content p, article .content ul, .skills .content p, .skills .content ul {
   margin: 0.125cm 0;
+}
+
+.skills {
+  margin: 0.5cm 0;
 }
 
 /*# sourceMappingURL=design.css.map */
